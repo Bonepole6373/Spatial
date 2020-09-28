@@ -1,0 +1,29 @@
+﻿@page
+
+@model IndexModel
+
+<div class="row">
+	<div class="col-4">
+		<p>MySQL</p>
+		@foreach (var Temp in Model.MySQLPoints)
+		{
+			<p>@Temp.RoutePointID - @Temp.Miles</p>
+		}
+	</div>
+
+	<div class="col-4">
+		<p>MariaDB</p>
+		@foreach (var Temp in Model.MariaDBPoints)
+		{
+			<p>@Temp.RoutePointID - @Temp.Miles</p>
+		}
+	</div>
+
+	<div class="col-4">
+		<p>MSSQL</p>
+		@foreach (var Temp in Model.MSSQLPoints)
+		{
+			<p>@Temp.RoutePointID - @Temp.Miles</p>
+		}
+	</div>
+</div>
